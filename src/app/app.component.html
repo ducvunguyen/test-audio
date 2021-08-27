@@ -1,0 +1,14 @@
+<button (click)="startRecording()">
+	Start recording
+</button>
+<button (click)="stopRecording()">
+	Stop
+</button>
+
+<!-- <audio  type="audio/mp3" [src]="audio"></audio> -->
+
+<ng-container *ngIf="audioFiles" >
+  <audio controls *ngFor="let audio of audioFiles">
+    <source [src]="audio" type="audio/mp3">
+  </audio>
+</ng-container>
